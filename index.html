@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohit Mehral - DevSecOps Architect & Cloud Evangelist</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --heading: #f0f6fc;
+            --accent: #58a6ff;
+            --accent2: #3fb950;
+            --muted: #8b949e;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
+        a:hover { opacity: 0.8; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 4rem 0 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .header h1 { font-size: 2.5rem; color: var(--heading); margin-bottom: 0.5rem; }
+        .header .tagline { font-size: 1.1rem; color: var(--accent); margin-bottom: 1rem; }
+        .header .location { color: var(--muted); font-size: 0.95rem; }
+        .header .links { margin-top: 1.2rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+        .header .links a {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            padding: 0.4rem 1rem; border: 1px solid var(--border); border-radius: 6px;
+            font-size: 0.85rem; transition: all 0.2s;
+        }
+        .header .links a:hover { border-color: var(--accent); background: rgba(88,166,255,0.1); }
+
+        /* Sections */
+        section { padding: 3rem 0; border-bottom: 1px solid var(--border); }
+        section:last-child { border-bottom: none; }
+        section h2 {
+            font-size: 1.5rem; color: var(--heading); margin-bottom: 1.5rem;
+            display: flex; align-items: center; gap: 0.6rem;
+        }
+        section h2 .emoji { font-size: 1.3rem; }
+
+        /* About */
+        .about p { color: var(--text); font-size: 0.95rem; }
+
+        /* Skills */
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .skill-tag {
+            background: rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.3);
+            padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; color: var(--accent);
+        }
+
+        /* Experience */
+        .exp-item { margin-bottom: 2rem; }
+        .exp-item h3 { color: var(--heading); font-size: 1.1rem; }
+        .exp-item .meta { color: var(--muted); font-size: 0.85rem; margin: 0.3rem 0 0.8rem; }
+        .exp-item ul { padding-left: 1.2rem; }
+        .exp-item li { margin-bottom: 0.5rem; font-size: 0.9rem; }
+
+        /* Projects */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+        .project-card {
+            background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+            padding: 1.2rem; transition: border-color 0.2s;
+        }
+        .project-card:hover { border-color: var(--accent); }
+        .project-card h3 { font-size: 0.95rem; color: var(--heading); margin-bottom: 0.4rem; }
+        .project-card p { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.8rem; }
+        .project-card .tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+        .project-card .tag {
+            font-size: 0.7rem; background: rgba(63,185,80,0.1); color: var(--accent2);
+            padding: 0.15rem 0.5rem; border-radius: 10px;
+        }
+
+        /* Certifications */
+        .cert-list { list-style: none; }
+        .cert-list li {
+            padding: 0.8rem 1rem; border-left: 3px solid var(--accent);
+            margin-bottom: 0.8rem; background: var(--card); border-radius: 0 6px 6px 0;
+        }
+        .cert-list li strong { color: var(--heading); font-size: 0.9rem; display: block; }
+        .cert-list li span { color: var(--muted); font-size: 0.8rem; }
+
+        /* Education */
+        .edu-item { margin-bottom: 1rem; }
+        .edu-item h3 { color: var(--heading); font-size: 1rem; }
+        .edu-item p { color: var(--muted); font-size: 0.85rem; }
+
+        /* Footer */
+        footer { text-align: center; padding: 2rem 0; color: var(--muted); font-size: 0.8rem; }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.8rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Mohit Mehral</h1>
+            <p class="tagline">DevSecOps Architect & Cloud Evangelist</p>
+            <p class="location">📍 Malmö, Sweden</p>
+            <div class="links">
+                <a href="mailto:mohitmehral@gmail.com">✉️ Email</a>
+                <a href="https://linkedin.com/in/mohitmehral" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/mohitmehral" target="_blank">🐙 GitHub</a>
+                <a href="https://github.com/copilot-founder" target="_blank">🤖 Copilot-Founder</a>
+            </div>
+        </header>
+
+        <section class="about">
+            <h2><span class="emoji">👋</span> About Me</h2>
+            <p>AWS Architect and DevOps Architect with deep expertise in DevSecOps, secure automation, and scalable cloud platform engineering. Proven track record of guiding large enterprises — including major banks — through cloud modernization and digital transformation journeys. Certified across AWS, Azure and GitHub Enterprise, I bring strong architectural leadership in building resilient hybrid platforms on hyperscale, advancing DevOps maturity, and integrating generative AI and advanced automation practices to drive operational efficiency and engineering productivity.</p>
+        </section>
+
+        <section>
+            <h2><span class="emoji">🛠️</span> Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Azure</span>
+                <span class="skill-tag">DevOps</span>
+                <span class="skill-tag">DevSecOps</span>
+                <span class="skill-tag">MLOps</span>
+                <span class="skill-tag">Kubernetes / EKS</span>
+                <span class="skill-tag">Terraform / IaC</span>
+                <span class="skill-tag">GitHub Enterprise</span>
+                <span class="skill-tag">GitHub Actions</span>
+                <span class="skill-tag">GitOps</span>
+                <span class="skill-tag">Generative AI</span>
+                <span class="skill-tag">Azure AI Studio</span>
+                <span class="skill-tag">LLMs</span>
+                <span class="skill-tag">Elastic Cloud Stack</span>
+                <span class="skill-tag">Jenkins CI/CD</span>
+                <span class="skill-tag">SonarQube Enterprise</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Linux / Bash</span>
+                <span class="skill-tag">PostgreSQL / Oracle</span>
+                <span class="skill-tag">Digital Ocean</span>
+                <span class="skill-tag">Redis</span>
+                <span class="skill-tag">BigQuery</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">SAFe / Agile</span>
+                <span class="skill-tag">Telecom USSD/SMS/SMPP</span>
+            </div>
+        </section>
+
+        <section>
+            <h2><span class="emoji">💼</span> Experience</h2>
+            <div class="exp-item">
+                <h3>DevSecOps Architect — Capgemini Sverige AB</h3>
+                <p class="meta">June 2017 — Present · Client: Ikano Bank, Malmö, Sweden</p>
+                <ul>
+                    <li>Led platform teams in defining strategic roadmaps and DevOps maturity models, improving DevSecOps maturity from 0.5 to 4.0 out of 5</li>
+                    <li>Migrated legacy repositories from SVN, GitLab, and CodeCommit to enterprise GitHub platform</li>
+                    <li>Governed AWS landing zone — conducting Well-Architected Framework reviews, AWS Config audits, and Trusted Advisor assessments</li>
+                    <li>Drove infrastructure cost reduction by adopting serverless, managed, and SaaS-based services</li>
+                    <li>Implemented GenAI-driven solutions leveraging GitHub Copilot, Azure AI Studio, and OpenAI</li>
+                    <li>Administered enterprise DevSecOps tools: GitHub Enterprise Cloud, Elastic Cloud, Nexus, SonarQube, Mend SAST/DAST</li>
+                </ul>
+            </div>
+            <div class="exp-item">
+                <h3>Solution Architect — Spice Money</h3>
+                <p class="meta">May 2006 — June 2017 · 5× Employee of the Year</p>
+                <ul>
+                    <li>Designed backend architectures for B2B/B2C platforms including <a href="https://www.spicemoney.com" target="_blank">spicemoney.com</a> and <a href="https://www.umang.gov.in" target="_blank">umang.gov.in</a></li>
+                    <li>Embedded DevOps-by-design principles — standardizing observability, logging, alerting across all projects</li>
+                    <li>Led PL/SQL team on PostgreSQL & Oracle 12c — data architecture, performance tuning, automation</li>
+                    <li>Architected HA web infrastructure with Nginx, Apache, Tomcat clustering, OS/kernel tuning, and server hardening</li>
+                    <li>Built high-performance telecom VAS platforms in C — GSM gateways for Vodafone, MTN, Uninor, Idea</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2><span class="emoji">🚀</span> Latest Projects</h2>
+            <div class="projects-grid">
+                <a href="https://github.com/mohitmehral/clawdbot" target="_blank" class="project-card">
+                    <h3>🦞 ClawdBot</h3>
+                    <p>Your own personal AI assistant. Any OS. Any Platform. The lobster way.</p>
+                    <div class="tags"><span class="tag">AI</span><span class="tag">Assistant</span><span class="tag">Cross-Platform</span></div>
+                </a>
+                <a href="https://github.com/mohitmehral/terraform-iac" target="_blank" class="project-card">
+                    <h3>🏗️ Terraform IaC</h3>
+                    <p>Infrastructure as Code skill built upon ClawdBot for automated cloud provisioning.</p>
+                    <div class="tags"><span class="tag">Terraform</span><span class="tag">IaC</span><span class="tag">Automation</span></div>
+                </a>
+                <a href="https://github.com/mohitmehral/denceWiPose" target="_blank" class="project-card">
+                    <h3>📡 DenceWiPose</h3>
+                    <p>WiFi-based system for detecting human presence without visual sensors.</p>
+                    <div class="tags"><span class="tag">IoT</span><span class="tag">WiFi</span><span class="tag">ML</span></div>
+                </a>
+                <a href="https://copilot-founder.github.io/ai-model-pricing/" target="_blank" class="project-card">
+                    <h3>💰 AI Model Pricing</h3>
+                    <p>Compare pricing across AWS Bedrock, Azure OpenAI, Google Vertex AI, OpenAI & Anthropic.</p>
+                    <div class="tags"><span class="tag">AI</span><span class="tag">Pricing</span><span class="tag">Comparison</span></div>
+                </a>
+                <a href="https://copilot-founder.github.io/git-training/" target="_blank" class="project-card">
+                    <h3>📚 Git Training</h3>
+                    <p>Git training material — versioning, history, branching & advance commands with cheatsheet.</p>
+                    <div class="tags"><span class="tag">Git</span><span class="tag">Training</span><span class="tag">DevOps</span></div>
+                </a>
+                <a href="https://copilot-founder.github.io/gitlearn/" target="_blank" class="project-card">
+                    <h3>🎮 GitLearn</h3>
+                    <p>Interactive visual web app for learning Git branching & merging through level-based exercises.</p>
+                    <div class="tags"><span class="tag">Interactive</span><span class="tag">Education</span><span class="tag">Git</span></div>
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <h2><span class="emoji">🏅</span> Certifications</h2>
+            <ul class="cert-list">
+                <li><strong>AWS Solution Architect Associate</strong><span>Feb 2023 — Feb 2025</span></li>
+                <li><strong>AWS Well-Architected Framework Specialist</strong><span>Nov 2024 — Renewed Mar 2026</span></li>
+                <li><strong>AWS Migration Ambassador Foundation</strong><span>2022 · Partner hackathon 3rd place</span></li>
+                <li><strong>Microsoft GitHub Enterprise Administrator</strong><span>Jul 2024 — Jun 2026</span></li>
+                <li><strong>Building Cloud Computing Solutions at Scale — Duke University</strong><span>Oct 2022 — Dec 2026</span></li>
+                <li><strong>SAFe 5 Architect</strong><span>Jun 2023 — Jun 2025</span></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2><span class="emoji">🎓</span> Education</h2>
+            <div class="edu-item">
+                <h3>Master's in Computer Science</h3>
+                <p>Kurukshetra University, India · 2003 — 2006</p>
+            </div>
+            <div class="edu-item">
+                <h3>Bachelor of Computer Science</h3>
+                <p>Himachal Pradesh University, Shimla, India · 2000 — 2003</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Built with ❤️ by Mohit Mehral · © 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
